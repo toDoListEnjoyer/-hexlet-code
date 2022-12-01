@@ -9,8 +9,7 @@ export const greeting = () => {
 
 export const getAnswerToQuestion = (question) => {
   console.log(question);
-  const answer = readlineSync.question('Your answer: ');
-  return answer;
+  return readlineSync.question('Your answer: ');
 };
 
 export const checkAnswer = (answer, expectedAnswer, name) => {
