@@ -25,3 +25,8 @@ export const checkAnswer = (answer, expectedAnswer, name) => {
 export const printEndGameMessage = (name, rounds) => {
   if (rounds === 0) console.log(`Congratulations, ${name}!`);
 };
+
+export const isInputNumeric = (answer) => {
+  if (!parseInt(answer, 10)) return false;
+  return true;
+};

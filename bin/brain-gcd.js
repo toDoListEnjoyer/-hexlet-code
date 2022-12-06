@@ -5,7 +5,7 @@ import {
 } from '@hexlet/pairs';
 import {
   numberOfRounds, maxNumberToGenerate, greeting,
-  getAnswerToQuestion, checkAnswer, printEndGameMessage,
+  getAnswerToQuestion, checkAnswer, printEndGameMessage, isInputNumeric,
 } from '../src/index.js';
 import askForName from '../src/cli.js';
 
@@ -27,7 +27,7 @@ while (rounds) {
   const question = `Question: ${car(pair)} ${cdr(pair)}`;
   const answer = getAnswerToQuestion(question);
 
-  if (!parseInt(answer, 10)) break; // Check for correct input
+  if (!isInputNumeric(answer)) break;
 
   if (car(pair) < cdr(pair)) pair = cons(cdr(pair), car(pair));
   const expectedAnswer = gcd(car(pair), cdr(pair));
