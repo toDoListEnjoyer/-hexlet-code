@@ -26,7 +26,18 @@ export const printEndGameMessage = (name, rounds) => {
   if (rounds === 0) console.log(`Congratulations, ${name}!`);
 };
 
-export const isInputNumeric = (answer) => {
+// Functions for checking if input is valid
+export const isNumeric = (answer) => {
   if (!parseInt(answer, 10)) return false;
   return true;
 };
+
+export const isYesOrNo = (answer) => {
+  if (!(answer === 'yes' || answer === 'no')) return false;
+  return true;
+};
+// ---
+
+// max: max not included possible value
+// min: min included possible value
+export const getRandomNumber = (max = 2, min = 0) => Math.floor(Math.random() * (max - min) + min);
