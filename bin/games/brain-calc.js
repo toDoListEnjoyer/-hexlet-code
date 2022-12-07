@@ -6,8 +6,8 @@ import {
 import {
   numberOfRounds, maxNumberToGenerate, greeting,
   getAnswerToQuestion, checkAnswer, printEndGameMessage, isNumeric, getRandomNumber,
-} from '../src/index.js';
-import askForName from '../src/cli.js';
+} from '../../src/index.js';
+import askForName from '../../src/cli.js';
 
 const operations = ['+', '-', '*'];
 let rounds = numberOfRounds;
