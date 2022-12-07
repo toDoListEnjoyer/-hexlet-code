@@ -9,7 +9,7 @@ export const greeting = () => {
 
 export const getAnswerToQuestion = (question) => {
   console.log(question);
-  return readlineSync.question('Your answer: ');
+  return readlineSync.question('Your answer: ').toLowerCase();
 };
 
 export const checkAnswer = (answer, expectedAnswer, name) => {
