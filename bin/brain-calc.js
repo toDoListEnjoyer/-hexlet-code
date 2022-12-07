@@ -5,7 +5,7 @@ import {
 } from '@hexlet/pairs';
 import {
   numberOfRounds, maxNumberToGenerate, greeting,
-  getAnswerToQuestion, checkAnswer, printEndGameMessage, isInputNumeric,
+  getAnswerToQuestion, checkAnswer, printEndGameMessage, isNumeric, getRandomNumber,
 } from '../src/index.js';
 import askForName from '../src/cli.js';
 
@@ -18,12 +18,12 @@ const name = askForName();
 console.log('What is the result of the expression?');
 
 while (rounds) {
-  const opIndex = Math.floor(Math.random() * operations.length);
-  const pair = cons(Math.floor(Math.random() * max), Math.floor(Math.random() * max));
+  const opIndex = getRandomNumber(operations.length);
+  const pair = cons(getRandomNumber(max), getRandomNumber(max));
   const question = `Question: ${car(pair)} ${operations[opIndex]} ${cdr(pair)}`;
   const answer = getAnswerToQuestion(question);
 
-  if (!isInputNumeric(answer)) break;
+  if (!isNumeric(answer)) break;
 
   let expectedAnswer = 0;
   if (operations[opIndex] === '+') {
