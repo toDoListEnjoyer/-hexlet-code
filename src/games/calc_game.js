@@ -2,18 +2,17 @@ import {
   cons, car, cdr,
 } from '@hexlet/pairs';
 import {
-  numberOfRounds, maxNumberToGenerate, greeting,
-  getAnswerToQuestion, checkAnswer, printEndGameMessage, isNumeric, getRandomNumber,
+  numberOfRounds, maxNumberToGenerate, getAnswerToQuestion,
+  checkAnswer, printEndGameMessage, isNumeric, getRandomNumber,
 } from '../index.js';
-import askForName from '../cli.js';
+import greeting from '../cli.js';
 
 const gameLauncher = () => {
   const operations = ['+', '-', '*'];
   let rounds = numberOfRounds;
   const max = maxNumberToGenerate;
 
-  greeting();
-  const name = askForName();
+  const name = greeting();
   console.log('What is the result of the expression?');
 
   while (rounds) {

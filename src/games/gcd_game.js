@@ -2,10 +2,10 @@ import {
   cons, car, cdr,
 } from '@hexlet/pairs';
 import {
-  numberOfRounds, maxNumberToGenerate, greeting,
-  getAnswerToQuestion, checkAnswer, printEndGameMessage, isNumeric, getRandomNumber,
+  numberOfRounds, maxNumberToGenerate, getAnswerToQuestion,
+  checkAnswer, printEndGameMessage, isNumeric, getRandomNumber,
 } from '../index.js';
-import askForName from '../cli.js';
+import greeting from '../cli.js';
 
 const gameLauncher = () => {
   let rounds = numberOfRounds;
@@ -17,8 +17,7 @@ const gameLauncher = () => {
     return b;
   };
 
-  greeting();
-  const name = askForName();
+  const name = greeting();
   console.log('Find the greatest common divisor of given numbers.');
 
   while (rounds) {

@@ -1,15 +1,14 @@
 import {
-  numberOfRounds, maxNumberToGenerate, greeting,
-  getAnswerToQuestion, checkAnswer, printEndGameMessage, isYesOrNo, getRandomNumber,
+  numberOfRounds, maxNumberToGenerate, getAnswerToQuestion,
+  checkAnswer, printEndGameMessage, isYesOrNo, getRandomNumber,
 } from '../index.js';
-import askForName from '../cli.js';
+import greeting from '../cli.js';
 
 const gameLauncher = () => {
   let rounds = numberOfRounds;
   const max = maxNumberToGenerate;
 
-  greeting();
-  const name = askForName();
+  const name = greeting();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   while (rounds) {
