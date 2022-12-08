@@ -1,8 +1,8 @@
 import {
-  numberOfRounds, maxNumberToGenerate, getAnswerToQuestion,
-  checkAnswer, printEndGameMessage, isNumeric, getRandomNumber,
+  numberOfRounds, maxNumberToGenerate, greeting,
+  getAnswerToQuestion, checkAnswer, printEndGameMessage, isNumeric, getRandomNumber,
 } from '../index.js';
-import greeting from '../cli.js';
+import askForName from '../cli.js';
 
 const gameLauncher = () => {
   let rounds = numberOfRounds;
@@ -13,7 +13,8 @@ const gameLauncher = () => {
   const maxDifference = 5;
   const minDifference = 1;
 
-  const name = greeting();
+  greeting();
+  const name = askForName();
   console.log('What number is missing in the progression?');
 
   while (rounds) {

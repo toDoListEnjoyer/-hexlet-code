@@ -3,6 +3,10 @@ import readlineSync from 'readline-sync';
 export const numberOfRounds = 3;
 export const maxNumberToGenerate = 25;
 
+export const greeting = () => {
+  console.log('Welcome to the Brain Games!');
+};
+
 export const getAnswerToQuestion = (question) => {
   console.log(question);
   return readlineSync.question('Your answer: ').toLowerCase();

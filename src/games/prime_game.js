@@ -1,8 +1,8 @@
 import {
-  numberOfRounds, maxNumberToGenerate, getAnswerToQuestion,
-  checkAnswer, printEndGameMessage, getRandomNumber, isYesOrNo,
+  numberOfRounds, maxNumberToGenerate, greeting,
+  getAnswerToQuestion, checkAnswer, printEndGameMessage, getRandomNumber, isYesOrNo,
 } from '../index.js';
-import greeting from '../cli.js';
+import askForName from '../cli.js';
 
 const gameLauncher = () => {
   let rounds = numberOfRounds;
@@ -13,7 +13,8 @@ const gameLauncher = () => {
     return num > 1;
   };
 
-  const name = greeting();
+  greeting();
+  const name = askForName();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
   while (rounds) {
